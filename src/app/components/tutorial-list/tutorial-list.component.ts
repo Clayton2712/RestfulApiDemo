@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TutorialService } from 'src/app/services/tutorial.service';
 
 @Component({
   selector: 'app-tutorial-list',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TutorialListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private tutorialService: TutorialService
+  ) {}
 
   ngOnInit(): void {
   }
