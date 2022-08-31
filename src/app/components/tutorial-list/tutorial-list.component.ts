@@ -9,8 +9,8 @@ import { TutorialService } from 'src/app/services/tutorial.service';
 })
 export class TutorialListComponent implements OnInit {
 
-  tutorials?: Tutorial[];
-  
+  public tutorials?: Tutorial[];
+
   constructor(
     private tutorialService: TutorialService
   ) {}
