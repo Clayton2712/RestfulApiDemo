@@ -8,8 +8,10 @@ import { TutorialService } from 'src/app/services/tutorial.service';
   styleUrls: ['./tutorial-list.component.css']
 })
 export class TutorialListComponent implements OnInit {
-
   public tutorials?: Tutorial[];
+  currentTutorial: Tutorial ={};
+  currentIndex = -1;
+  title = '';
 
   constructor(
     private tutorialService: TutorialService
@@ -28,6 +30,11 @@ export class TutorialListComponent implements OnInit {
         },
         error: (e) => console.error(e)
       });
+  }
+  
+  setActiveTutorial(tutorial: Tutorial, index: number): void {
+    this.currentTutorial = tutorial;
+    this.currentIndex = index;
   }
 
 }
